@@ -18,8 +18,11 @@
 
 rt_thread_t th1_ptr = NULL;
 
+struct rt_thread th2 ;
 
+rt_uint8_t th2_stack[512] = { 0 };
 
+rt_err_t ret;
 
 int main(void)
 {
@@ -34,6 +37,13 @@ int main(void)
     rt_thread_startup(th1_ptr);
 
     //静态创建线程
-
+    ret = rt_thread_init(&th2, "th2_demo", th_entry2, NULL, th2_stack, 512, 15, 5);
+    if (ret < 0)
+    {
+        LOG_E("rt_thread2 create failed...\n");
+        return ret;
+    }
+    LOG_D("rt_thread create2 success...\n");
+    rt_thread_startup(&th2);
     return RT_EOK;
 }

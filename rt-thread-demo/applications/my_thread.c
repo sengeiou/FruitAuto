@@ -18,3 +18,12 @@ void th_entry(void *parameter)
         rt_thread_mdelay(5000);
     }
 }
+
+void th_entry2(void *parameter)
+{
+    while (1)
+    {
+        rt_kprintf("Hello 2...\n");
+        rt_thread_mdelay(2000);
+    }
+}
