@@ -11,5 +11,7 @@
 #define APPLICATIONS_MY_THREAD_H_
 
 void th_entry(void *parameter);
+void th_entry2(void *parameter);
+
 
 #endif /* APPLICATIONS_MY_THREAD_H_ */
