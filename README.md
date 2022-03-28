@@ -5,9 +5,8 @@
 这是水果操作的代码库
 
 #### 软件架构
-基于的是rt-thread框架
- - web 前端代码
- - rt-thread-demo rt-thread测试代码
+ - web 网络代码 前端Clien基于Bootstrap ApexChart 后端Serve基于Flask
+ - rt-thread-demo rt-thread测试代码 基于rt-thread 主控为stm32f407vet6 主频168Mhz 8Mhz外部晶振
 
 #### 特技
 
