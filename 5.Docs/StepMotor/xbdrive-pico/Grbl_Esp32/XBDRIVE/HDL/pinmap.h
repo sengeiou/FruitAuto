@@ -1,0 +1,27 @@
+#ifndef __PINMAP_H_
+#define __PINMAP_H_
+
+// SPI编码器
+#define ENC_CSN_PIN GPIO_NUM_5
+#define ENC_SCK_PIN GPIO_NUM_18
+#define ENC_SDI_PIN GPIO_NUM_23
+#define ENC_SDO_PIN GPIO_NUM_19
+// LED引脚
+#define LED_PIN GPIO_NUM_4
+// 配置引脚
+// 输入信号引脚
+#define ENN_PIN GPIO_NUM_12
+#define STEP_PIN GPIO_NUM_27
+#define DIR_PIN GPIO_NUM_14
+// 功率部分控制引脚
+#define A_PHASE_IN1_PIN GPIO_NUM_21
+#define A_PHASE_IN2_PIN GPIO_NUM_22
+#define A_PHASE_VREF_DAC_PIN GPIO_NUM_25
+#define B_PHASE_IN1_PIN GPIO_NUM_9
+#define B_PHASE_IN2_PIN GPIO_NUM_10
+#define B_PHASE_VREF_DAC_PIN GPIO_NUM_26
+// 采样引脚
+#define VOLSAMP_ADC_CHANNEL ADC1_CHANNEL_0
+#define TEMPSENSOR_ADC_CHANNEL ADC1_CHANNEL_3
+
+#endif
