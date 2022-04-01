@@ -4,6 +4,6 @@ title auto commit
 git.exe add -A
 git.exe commit -m %commit%
  
-git push origin master
-git branch -u origin/master master
+git push origin main
+git push github main
 exit
