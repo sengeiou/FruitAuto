@@ -1,0 +1,10 @@
+Added Component: Designator=CON1(DC-005)
+Add component (AddParameter): Name = "BOM名称"; Value = "DC电源接口"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "联系卖家，免费技术支持"; Value = "唯一出售店铺网址https://shop463601444.taobao.com"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=VIN Pin=CON1-1
+Added Pin To Net: NetName=PGND Pin=CON1-2
+Added Pin To Net: NetName=PGND Pin=CON1-3
+Change Net Name : Old Net Name=FB New Net Name=NetR4_2
+Change Net Name : Old Net Name=PGND New Net Name=NetC6_1
+Added Member To Class: ClassName=1_P1 Member=Component CON1 3.5*1.3
+Added Room: Name=1_P1

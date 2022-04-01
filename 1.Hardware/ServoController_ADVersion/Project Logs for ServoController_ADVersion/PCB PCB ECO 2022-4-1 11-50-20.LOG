@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=GND Pin=R12-1
+Removed Member From Class: ClassName=1_P1 Member=R12
+Change Component Designator: OldDesignator=G NewDesignator=H3
+Change Component Designator: OldDesignator=P NewDesignator=H1
+Change Component Designator: OldDesignator=V NewDesignator=H2
+Change Component Designator: OldDesignator=VH NewDesignator=VIN
+Change Component Designator: OldDesignator=VL NewDesignator=VCC
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=GND Pin=CON1-2
+Added Pin To Net: NetName=GND Pin=CON1-3
+Added Pin To Net: NetName=GND Pin=D1-2
+Added Pin To Net: NetName=GND Pin=U2-1
+Change Room Name: Old Name=RoomMCU New Name=1_P1
+Change Room Scope: Old Scope=InComponent('U1') New Scope=InComponentClass('1_P1')
