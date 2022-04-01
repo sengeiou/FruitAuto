@@ -5,9 +5,13 @@ git.exe add -A
 git.exe commit -m "%commit%"
  
 git push origin main
-color 02
-echo "color 02" -----------gitee push ok-----------
+echo.
+echo -----------gitee push ok-----------
+echo.
+
 git push github main
-call :ColorStr 0C "-----------github push ok-----------"
+echo.
+echo -----------github push ok-----------
+echo.
 
 pause
