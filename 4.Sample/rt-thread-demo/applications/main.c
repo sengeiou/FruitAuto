@@ -13,7 +13,6 @@
 #define DBG_TAG "main"
 #define DBG_LVL DBG_LOG
 #include <rtdbg.h>
-
 #include "my_thread.h"
 
 rt_thread_t th1_ptr = NULL;
@@ -21,7 +20,6 @@ rt_thread_t th1_ptr = NULL;
 struct rt_thread th2 ;
 
 rt_uint8_t th2_stack[512] = { 0 };
-
 rt_err_t ret;
 
 int main(void)
@@ -59,3 +57,4 @@ int main(void)
 
     return RT_EOK;
 }
+
