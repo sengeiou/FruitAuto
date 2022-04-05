@@ -10,6 +10,11 @@
 #ifndef APPLICATIONS_MY_THREAD_H_
 #define APPLICATIONS_MY_THREAD_H_
 
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
 //线程1执行函数
 void th_entry(void *parameter);
 
