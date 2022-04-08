@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp.sp
+"cbtest\startup_stm32f407xx.o"
+"cbtest\main.o"
+"cbtest\stm32f4xx_it.o"
+"cbtest\stm32f4xx_hal_msp.o"
+"cbtest\stm32f4xx_hal_i2c.o"
+"cbtest\stm32f4xx_hal_i2c_ex.o"
+"cbtest\stm32f4xx_hal_rcc.o"
+"cbtest\stm32f4xx_hal_rcc_ex.o"
+"cbtest\stm32f4xx_hal_flash.o"
+"cbtest\stm32f4xx_hal_flash_ex.o"
+"cbtest\stm32f4xx_hal_flash_ramfunc.o"
+"cbtest\stm32f4xx_hal_gpio.o"
+"cbtest\stm32f4xx_hal_dma_ex.o"
+"cbtest\stm32f4xx_hal_dma.o"
+"cbtest\stm32f4xx_hal_pwr.o"
+"cbtest\stm32f4xx_hal_pwr_ex.o"
+"cbtest\stm32f4xx_hal_cortex.o"
+"cbtest\stm32f4xx_hal.o"
+"cbtest\stm32f4xx_hal_exti.o"
+"cbtest\stm32f4xx_hal_tim.o"
+"cbtest\stm32f4xx_hal_tim_ex.o"
+"cbtest\system_stm32f4xx.o"
+--strict --scatter "cbtest\cbtest.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "cbtest.map" -o cbtest\cbtest.axf
