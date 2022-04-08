@@ -368,10 +368,10 @@ Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
 interwork --depend=rt-thread-nano-demo\context_rvds.d -ort-thread-nano-demo\con
 text_rvds.o -I.\RTE\_rt-thread-nano-demo -IE:\Development\Shared\KeilPack\ARM\C
 MSIS\5.8.0\CMSIS\Core\Include -IE:\Development\Shared\KeilPack\Keil\STM32F4xx_D
-FP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include --predefine="__UVISION_VERS
-ION SETA 536" --predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --pre
-define="_RTE_ SETA 1" --list=context_rvds.lst ../Middlewares/Third_Party/RealTh
-read_RTOS/libcpu/arm/cortex-m4/context_rvds.S
+FP\2.16.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include --predefine="__MICROLIB SET
+A 1" --predefine="__UVISION_VERSION SETA 536" --predefine="_RTE_ SETA 1" --pred
+efine="STM32F407xx SETA 1" --predefine="_RTE_ SETA 1" --list=context_rvds.lst .
+./Middlewares/Third_Party/RealThread_RTOS/libcpu/arm/cortex-m4/context_rvds.S
 
 
 
@@ -630,4 +630,4 @@ cortex-m4/context_rvds.S
 /cortex-m4/context_rvds.S
 
 4 symbols
-357 symbols in table
+358 symbols in table

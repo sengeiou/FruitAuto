@@ -1,9 +1,13 @@
 --cpu=Cortex-M4.fp.sp
 "rt-thread-nano-demo\startup_stm32f407xx.o"
-"rt-thread-nano-demo\main.o"
 "rt-thread-nano-demo\stm32f4xx_it.o"
 "rt-thread-nano-demo\stm32f4xx_hal_msp.o"
-"rt-thread-nano-demo\stm32f4xx_hal_timebase_tim.o"
+"rt-thread-nano-demo\myoled.o"
+"rt-thread-nano-demo\mymotor.o"
+"rt-thread-nano-demo\mypca.o"
+"rt-thread-nano-demo\main.o"
+"rt-thread-nano-demo\stm32f4xx_hal_i2c.o"
+"rt-thread-nano-demo\stm32f4xx_hal_i2c_ex.o"
 "rt-thread-nano-demo\stm32f4xx_hal_rcc.o"
 "rt-thread-nano-demo\stm32f4xx_hal_rcc_ex.o"
 "rt-thread-nano-demo\stm32f4xx_hal_flash.o"
@@ -21,6 +25,9 @@
 "rt-thread-nano-demo\stm32f4xx_hal_tim_ex.o"
 "rt-thread-nano-demo\stm32f4xx_hal_uart.o"
 "rt-thread-nano-demo\system_stm32f4xx.o"
+"rt-thread-nano-demo\oled_1.o"
+"rt-thread-nano-demo\motor.o"
+"rt-thread-nano-demo\pca9685_1.o"
 "rt-thread-nano-demo\context_rvds.o"
 "rt-thread-nano-demo\clock.o"
 "rt-thread-nano-demo\components.o"
@@ -43,7 +50,7 @@
 "rt-thread-nano-demo\finsh_port.o"
 "rt-thread-nano-demo\msh.o"
 "rt-thread-nano-demo\shell.o"
---strict --scatter "rt-thread-nano-demo\rt-thread-nano-demo.sct"
+--library_type=microlib --strict --scatter "rt-thread-nano-demo\rt-thread-nano-demo.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "rt-thread-nano-demo.map" -o rt-thread-nano-demo\rt-thread-nano-demo.axf
