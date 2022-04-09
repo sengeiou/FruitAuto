@@ -9,8 +9,7 @@ void pca_i2c_set(I2C_HandleTypeDef *i){
 
 void pca_reset(void)
 {
-  pca_write1(pca_mode1,0x0);
-
+  pca_write(pca_mode1,0x0);
 }
 
 uint8_t pca_read(uint8_t startAddress) {

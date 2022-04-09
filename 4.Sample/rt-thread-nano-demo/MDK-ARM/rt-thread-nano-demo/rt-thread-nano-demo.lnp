@@ -1,11 +1,11 @@
 --cpu=Cortex-M4.fp.sp
 "rt-thread-nano-demo\startup_stm32f407xx.o"
-"rt-thread-nano-demo\stm32f4xx_it.o"
-"rt-thread-nano-demo\stm32f4xx_hal_msp.o"
 "rt-thread-nano-demo\myoled.o"
 "rt-thread-nano-demo\mymotor.o"
 "rt-thread-nano-demo\mypca.o"
 "rt-thread-nano-demo\main.o"
+"rt-thread-nano-demo\stm32f4xx_it.o"
+"rt-thread-nano-demo\stm32f4xx_hal_msp.o"
 "rt-thread-nano-demo\stm32f4xx_hal_i2c.o"
 "rt-thread-nano-demo\stm32f4xx_hal_i2c_ex.o"
 "rt-thread-nano-demo\stm32f4xx_hal_rcc.o"

@@ -22,7 +22,7 @@ Dialog DLL:      TCM.DLL V1.53.0.0
  
 <h2>Project:</h2>
 c:\Users\ijink\OneDrive\fruit\4.Sample\rt-thread-nano-demo\MDK-ARM\rt-thread-nano-demo.uvprojx
-Project File Date:  04/08/2022
+Project File Date:  04/09/2022
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 7 (build 960)', folder: 'E:\Development\Eclipse\KeilArm\ARM\ARMCC\Bin'
@@ -30,10 +30,21 @@ Build target 'rt-thread-nano-demo'
 Note: source file '..\Drivers\oled\oled.c' - object file renamed from 'rt-thread-nano-demo\oled.o' to 'rt-thread-nano-demo\oled_1.o'.
 Note: source file '..\Drivers\pca9685\pca9685.c' - object file renamed from 'rt-thread-nano-demo\pca9685.o' to 'rt-thread-nano-demo\pca9685_1.o'.
 compiling main.c...
+..\Core\Src\main.c(116): warning:  #177-D: variable "motor_thread"  was declared but never referenced
+    static struct rt_thread motor_thread;
+..\Core\Src\main.c(117): warning:  #177-D: variable "motor_thread_stack"  was declared but never referenced
+    static char motor_thread_stack[512] = {0};
+..\Core\Src\main.c(118): warning:  #177-D: variable "oled_thread"  was declared but never referenced
+    static struct rt_thread oled_thread;
+..\Core\Src\main.c(119): warning:  #177-D: variable "oled_thread_stack"  was declared but never referenced
+    static char oled_thread_stack[1024] = {0};
+..\Core\Src\main.c(453): warning:  #177-D: function "MX_USART1_UART_Init"  was declared but never referenced
+  static void MX_USART1_UART_Init(void)
+..\Core\Src\main.c: 5 warnings, 0 errors
 linking...
-Program Size: Code=17122 RO-data=3914 RW-data=184 ZI-data=7936  
+Program Size: Code=16778 RO-data=1390 RW-data=156 ZI-data=5724  
 FromELF: creating hex file...
-"rt-thread-nano-demo\rt-thread-nano-demo.axf" - 0 Error(s), 0 Warning(s).
+"rt-thread-nano-demo\rt-thread-nano-demo.axf" - 0 Error(s), 5 Warning(s).
 
 <h2>Software Packages used:</h2>
 
