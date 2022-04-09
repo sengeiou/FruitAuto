@@ -20,3 +20,11 @@ void oled_entry(void *p)
         rt_kprintf("oled thread\n");
     }
 }
+
+void oled_entry2(void *p, uint8_t * txt)
+{
+    i2c_handle_set(p);
+    OLED_Init();
+    OLED_Clear();
+    OLED_ShowString(0, 0, txt, 16);
+}

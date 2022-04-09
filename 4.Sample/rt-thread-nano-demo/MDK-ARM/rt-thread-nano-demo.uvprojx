@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../RT-Thread;../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Middlewares/Third_Party/RealThread_RTOS/include/;../Middlewares/Third_Party/RealThread_RTOS/bsp/_template/cubemx_config;../Middlewares/Third_Party/RealThread_RTOS/finsh/;../Middlewares/Third_Party/RealThread_RTOS/components/finsh;../Drivers/oled;..\Drivers\motor;..\Drivers\pca9685</IncludePath>
+              <IncludePath>../RT-Thread;../Core/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc;../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;../Drivers/CMSIS/Device/ST/STM32F4xx/Include;../Drivers/CMSIS/Include;../Middlewares/Third_Party/RealThread_RTOS/include/;../Middlewares/Third_Party/RealThread_RTOS/bsp/_template/cubemx_config;../Middlewares/Third_Party/RealThread_RTOS/finsh/;../Middlewares/Third_Party/RealThread_RTOS/components/finsh;../Drivers/oled;../Drivers/motor;../Drivers/pca9685</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -394,16 +394,6 @@
           <GroupName>Application/User/Core</GroupName>
           <Files>
             <File>
-              <FileName>stm32f4xx_it.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Core/Src/stm32f4xx_it.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f4xx_hal_msp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Core/Src/stm32f4xx_hal_msp.c</FilePath>
-            </File>
-            <File>
               <FileName>myoled.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\Src\myoled.c</FilePath>
@@ -422,6 +412,16 @@
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Core\Src\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/stm32f4xx_it.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_hal_msp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/stm32f4xx_hal_msp.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -712,6 +712,9 @@
               <FilePath>..\Drivers\pca9685\pca9685.c</FilePath>
             </File>
           </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
         </Group>
         <Group>
           <GroupName>Middlewares/RT-Thread/RTOS/kernel</GroupName>
@@ -2079,9 +2082,6 @@
               </FileOption>
             </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>::CMSIS</GroupName>
         </Group>
       </Groups>
     </Target>
