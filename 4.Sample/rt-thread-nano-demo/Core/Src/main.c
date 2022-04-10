@@ -53,7 +53,8 @@ UART_HandleTypeDef huart2;
 UART_HandleTypeDef huart3;
 
 /* USER CODE BEGIN PV */
-
+uint8_t u2date[20];
+uint8_t u2buff;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -72,8 +73,7 @@ static void MX_USART3_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint8_t u2date[6];
-uint8_t u2buff;
+
 uint8_t u2len = 0;
 /* USER CODE END 0 */
 
@@ -150,35 +150,53 @@ int main(void)
 // uint8_t i = '0';
 uint8_t START = 0xff;
 uint8_t END = 0x00;
+uint8_t k210_data[5];
+
+void k210_data_get()
+{
+  //uint8_t n = 0;
+  uint8_t x = 100;
+  uint8_t temp = 0;
+  for (int j = 0; j < 4; j++)
+  {
+    for (int i = (j * 4) + 1; i < (j * 4) + 4; i++)
+    {
+      temp += u2date[i] == 0x20 ? 0 : (u2date[i] - '0') * x;
+      //rt_kprintf("");
+      x /= 10;
+    }
+    k210_data[j] = temp;
+    temp = 0;
+    x = 100;
+  }
+  k210_data[4] = u2date[17];
+}
+
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
   if (huart->Instance == USART2) //判断串口号
   {
-<<<<<<< HEAD
-=======
-    //发送
-    // HAL_UART_Transmit(&huart1,&my_uart1_redata,1,100);
     //开启一次中断
->>>>>>> origin/main
     // i ++;
     // oled_entry2(&hi2c3, &i);
-    UNUSED(huart);
-    if (u2len == 0 && u2buff != 0xff)
+    if (u2len == 0 && u2buff != 0x52)
+    //接收到字符串R代表开始
     {
-      HAL_UART_Transmit(&huart2, &START, 1, 0xffff);
     }
-    else if (u2len == 5 && u2buff != 0x00)
+    else if (((u2len == 4 || u2len == 8 || u2len == 12 || u2len == 16) && u2buff != 0x2C) || ((u2len == 18 || u2len == 19) && (u2buff != 0x0D && u2buff != 0x0A)))
     {
-      HAL_UART_Transmit(&huart2, &END, 1, 0xffff);
+      HAL_UART_Transmit(&huart2, "BAD REQUESTS", 12, 0xffff);
       u2len = 0;
     }
     else
     {
       u2date[u2len] = u2buff;
       u2len++;
-      if (u2len > 5)
+      if (u2len > 19)
       {
-        HAL_UART_Transmit(&huart2, u2date, 6, 0xffff);
+        // HAL_UART_Transmit(&huart2, u2date, 20, 0xffff);
+        k210_data_get();
+        rt_kprintf("x=%d,y=%d,w=%d,h=%d,id=%d\n", k210_data[0], k210_data[1], k210_data[2], k210_data[3], k210_data[4]);
         u2len = 0;
       }
     }
