@@ -154,9 +154,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
   if (huart->Instance == USART2) //判断串口号
   {
-    //发送
-    // HAL_UART_Transmit(&huart1,&my_uart1_redata,1,100);
-    //开启一次中断
     // i ++;
     // oled_entry2(&hi2c3, &i);
     UNUSED(huart);

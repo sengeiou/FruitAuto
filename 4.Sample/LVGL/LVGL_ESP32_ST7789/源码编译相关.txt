@@ -1,0 +1,13 @@
+Arduino IDE附加开发板管理器网址：
+https://dl.espressif.com/dl/package_esp32_index.json
+
+Arduino IDE编译板卡选择：
+ESP32_Dev_Module 或 DOIT ESP32 DEVKIT V1
+
+Arduino 类库安装
+拷贝需要安装的集成库目录到: 文档\Arduino\libraries
+或者自行使用Arduino IDE库管理器进行安装
+
+如需上传图片和字体文件到ESP32板载Flash的SPIFFS
+解压ESP32FS到Arduino 安装目录-> tools
+使用ArduinoIDE 的 "Tools" ->  "ESP32 Sketch Data Upload" 进行上传
