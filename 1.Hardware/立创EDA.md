@@ -1,1 +1,0 @@
-![迷你有刷直流电机控制模块](https://oshwhub.com/KJ_Plus/motorcontroller)
